@@ -94,6 +94,11 @@
   box-sizing: border-box;
 }
 
+html {
+  min-width: 320px;
+  -webkit-text-size-adjust: 100%;
+}
+
 * {
   scrollbar-width: thin;
 }
@@ -414,7 +419,9 @@ a {
 }
 
 .content {
+  width: 100%;
   max-width: 1120px;
+  min-width: 0;
   margin: 0 auto;
   padding: 24px 24px 64px;
 }
@@ -1003,7 +1010,19 @@ a {
   }
 
   .content {
-    padding: 16px 16px 48px;
+    padding: 16px max(16px, env(safe-area-inset-right)) 48px
+      max(16px, env(safe-area-inset-left));
+  }
+
+  .nav-search input,
+  .personal-field input,
+  .personal-field select {
+    font-size: 16px;
+  }
+
+  .icon-btn {
+    width: 44px;
+    height: 44px;
   }
 
   .reading {
@@ -1022,8 +1041,12 @@ a {
 
   .topbar {
     display: grid;
-    grid-template-columns: 40px minmax(0, 1fr) auto;
+    grid-template-columns: 44px minmax(0, 1fr) auto;
     height: auto;
+    gap: 4px 8px;
+    padding-top: max(8px, env(safe-area-inset-top));
+    padding-right: max(8px, env(safe-area-inset-right));
+    padding-left: max(8px, env(safe-area-inset-left));
   }
 
   .nav-actions {
@@ -1036,6 +1059,15 @@ a {
     grid-row: 2;
     width: 100%;
     max-width: none;
+  }
+
+  .psalm-card,
+  .result {
+    padding: 12px;
+  }
+
+  .verse {
+    gap: 6px;
   }
 }
 
