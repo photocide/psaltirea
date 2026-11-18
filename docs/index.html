@@ -2,8 +2,8 @@
 <html lang="ro" class="startup-transitions-blocked" data-beasties-container>
   <head>
     <title>Psaltirea</title>
-    <meta charset="UTF-8" />
-    <base href="/" />
+    <meta charset="UTF-8">
+    <base href="/">
     <style>
       html.startup-transitions-blocked *,
       html.startup-transitions-blocked *::before,
@@ -24,68 +24,7 @@
         opacity: 0;
       }
     </style>
-    <style>
-      :root {
-        --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-        --font-reading: Georgia, "Times New Roman", serif;
-        --reading-font-size: 18px;
-        --gap: 8px;
-        --bg: #f6f8f3;
-        --surface: #ffffff;
-        --surface-hover: #ecf2e8;
-        --personal-psalm-bg: #fceef3;
-        --personal-psalm-border: #e7c7d4;
-        --text: #28332b;
-        --text-muted: #58675d;
-        --border: #d3ded0;
-        --primary: #3b6945;
-        --primary-hover: #2b5134;
-        --on-primary: #ffffff;
-        --accent: #a23866;
-        --error: #b42318;
-        --focus: #3b6945;
-        --highlight-bg: #f8e9a1;
-        --highlight-text: #28332b;
-        --scrollbar-thumb: var(--text-muted);
-        color-scheme: light;
-        scrollbar-color: var(--scrollbar-thumb) var(--surface);
-      }
-      *,
-      *:before,
-      *:after {
-        box-sizing: border-box;
-      }
-      * {
-        scrollbar-width: thin;
-      }
-      body {
-        margin: 0;
-        background: var(--bg);
-        color: var(--text);
-        font-family: var(--font-ui);
-        font-weight: 400;
-        line-height: 1.5;
-        transition:
-          background-color 0.25s ease,
-          color 0.25s ease;
-      }
-      @media (prefers-reduced-motion: reduce) {
-        *,
-        *:before,
-        *:after {
-          transition: none !important;
-          animation: none !important;
-        }
-      }
-    </style>
-    <link
-      rel="stylesheet"
-      href="styles.css"
-      media="print"
-      onload="this.media = 'all'"
-    />
-    <noscript><link rel="stylesheet" href="styles.css" /></noscript>
-  </head>
+  <style>:root{--font-ui:system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;--font-reading:Georgia, "Times New Roman", serif;--reading-font-size:18px;--gap:8px;--bg:#f6f8f3;--surface:#ffffff;--surface-hover:#ecf2e8;--personal-psalm-bg:#fceef3;--personal-psalm-border:#e7c7d4;--text:#28332b;--text-muted:#58675d;--border:#d3ded0;--primary:#3b6945;--primary-hover:#2b5134;--on-primary:#ffffff;--accent:#a23866;--error:#b42318;--focus:#3b6945;--highlight-bg:#f8e9a1;--highlight-text:#28332b;--scrollbar-thumb:var(--text-muted);color-scheme:light;scrollbar-color:var(--scrollbar-thumb) var(--surface)}*,*:before,*:after{box-sizing:border-box}*{scrollbar-width:thin}body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-ui);font-weight:400;line-height:1.5;transition:background-color .25s ease,color .25s ease}@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important}}</style><link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.css"></noscript></head>
   <body>
     <div class="startup-overlay" aria-hidden="true"></div>
     <app-root>Loading...</app-root>
@@ -103,6 +42,5 @@
       }, 100);
       window.setTimeout(() => overlay?.remove(), 200);
     </script>
-    <script src="main.js" type="module"></script>
-  </body>
+  <script src="main.js" type="module"></script></body>
 </html>
