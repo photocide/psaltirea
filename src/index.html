@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ro" class="startup-transitions-blocked">
+<html lang="ro">
   <head>
     <title>Psaltirea</title>
     <meta charset="UTF-8" />
@@ -7,44 +7,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
-    <base href="/psaltirea/" />
-    <style>
-      html.startup-transitions-blocked *,
-      html.startup-transitions-blocked *::before,
-      html.startup-transitions-blocked *::after {
-        transition: none !important;
-      }
-
-      .startup-overlay {
-        position: fixed;
-        inset: 0;
-        z-index: 9999;
-        background: #3b6945;
-        opacity: 1;
-        transition: opacity 150ms ease;
-      }
-
-      .startup-overlay.is-hidden {
-        opacity: 0;
-      }
-    </style>
+    <base href="/psaltire/" />
   </head>
   <body>
-    <div class="startup-overlay" aria-hidden="true"></div>
     <app-root>Loading...</app-root>
-    <script>
-      const overlay = document.querySelector(".startup-overlay");
-      const color = localStorage.getItem("psalter.themeColor");
-      if (overlay && color && /^#[0-9a-f]{6}$/i.test(color)) {
-        overlay.style.backgroundColor = color;
-      }
-      window.setTimeout(() => {
-        document.documentElement.classList.remove(
-          "startup-transitions-blocked",
-        );
-        overlay?.classList.add("is-hidden");
-      }, 100);
-      window.setTimeout(() => overlay?.remove(), 200);
-    </script>
   </body>
 </html>

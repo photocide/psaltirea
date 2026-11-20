@@ -35,14 +35,13 @@ import { SavedItemsService } from "../services/saved-items.service";
       <article class="reading">
         @for (verse of psalm.verses; track $index; let index = $index) {
           <p class="verse">
-            <span class="verse-number">{{ index + 1 }}</span>
             <span
               class="verse-text"
               [class.is-saved]="
                 saved.isPassageSaved(verse.psalmNumber, verse.verseNumber)
               "
             >
-              {{ verse.text }}
+              {{ index + 1 }}. {{ verse.text }}
               <a
                 class="personal-reference"
                 [routerLink]="['/psalmi', verse.psalmNumber]"

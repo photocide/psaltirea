@@ -57,13 +57,13 @@ import { AppIcon } from "../components/app-icon";
       <article class="reading">
         @for (verse of verses(); track verse.verseNumber) {
           <p class="verse" [id]="'verset-' + verse.verseNumber">
-            <span class="verse-number">{{ verse.verseNumber }}</span>
             <span
               class="verse-text"
               [class.is-saved]="
                 saved.isPassageSaved(verse.psalmNumber, verse.verseNumber)
               "
-              >{{ verse.text }}</span
+            >
+              {{ verse.verseNumber }}. {{ verse.text }}</span
             >
             <button
               class="icon-btn"
